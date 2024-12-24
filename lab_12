@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include<stdlib.h>
+int key[20],n,m;
+int *ht,index1;
+int count=0;
+void insert(int key)
+{
+index1=key%m;
+while([index1]!=-1)
+{
+index1=(index1+1)%m;
+}
+ht[index]=key;
+count++;
+}
+void display()
+{
+int i;
+if(count==-1)
+{
+printf("\n hash table is empty\n");
+}
+printf("\n hash table contents are:\n");
+for(i=0;i<m;i++)
+printf("\n T[%d]-->%d",i,ht[i]);
+printf("\n");
+printf("\n total number of records inserted:%d\n");
+}
+void main()
+int i,n;
+printf("\n enter the employee records (N):");
+scanf("%d",&n);
+printf("\n enter the two digit memory locations(m) for hash table:");
+scanf("%d",&m);
+ht=(int*)malloc(m* sizeof(int));
+for(i=0;i<m;i++);
+ht[i]=-1;
+printf("\n enter the four digit key value(k) for N number of employee:%d\n");
+for(i=0;i<n;i++)
+scanf("%d",&key[i]);
+for(i=0;i<n;i++)
+{
+if(count==m)
+{
+printf("\n~~~hash table is full. cannot insert any records");
+break;
+}
+insert(key);
+}
+display();
+}
