@@ -39,6 +39,9 @@ s[++top]=res;
 res=s[top--]; 
 printf("The result is %f",res); 
 } 
+
+
+
 part b:-
 #include <stdio.h> 
 void tower(int n,char beg,char aux,char end) 
